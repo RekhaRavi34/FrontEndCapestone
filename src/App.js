@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Homepage from './pages/Homepage'
+import Bookingpage from './pages/BookingPage'
+import About from './pages/About'
+import Menu from './pages/Menu'
+import Orderonline from './pages/Orderonline'
+import Login from './pages/Login'
+import Bookingconfirmed from './pages/Bookingconfirmed'
+import { Route,Routes } from 'react-router-dom'
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <main >
+      <Header />
+      <Routes>
+        <Route path='/' element={<Homepage/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/menu' element={<Menu/>}/>
+        <Route path='/reserve' element={<Bookingpage/>}/>
+        <Route path='/orderonline' element={<Orderonline/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/confirmed' element={<Bookingconfirmed/>}/>
+      </Routes>
+      <Footer/>
+    </main>
+    </>
+  )
 }
 
-export default App;
+export default App

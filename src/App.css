@@ -1,38 +1,538 @@
-.App {
+a{
+  text-decoration:none
+}
+ul{
+  list-style-type: none;
+}
+
+:root {
+  --primary:#495e57;
+  --primary2: #f4ce14;
+  --secondary: #ee9972;
+  --secondary2: #fbdabb;
+  --highlight: #edefee;
+  --highlight2: #333333;
+}
+header{
+  width: 100%;
+  background-color: var(--highlight);
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap: wrap;
+}
+header ul{
+  display:flex;
+  flex-wrap: wrap;
+}
+header .ancho{
+  color:var(--highlight2);
+  font-weight: bold;
+  padding:1rem .14rem;
+  display:inline-block;
+  margin:0 1rem;
+  font-family: karla;
+  font-size: 1.1rem;
+}
+header .ancho:hover{
+  color: var(--primary2);
+}
+.buttoncomp{
+  font-family: karla;
+  color:#333333;
+  font-size: .9rem;
+  background-color: var(--primary2);
+  width: 8rem;
+  padding:1rem;
+  border-radius: 1rem;
+  font-weight: bold;
   text-align: center;
 }
+.buttoncomp:hover{
+  box-shadow: 3px 3px 2px black;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section1{
+  background-color: var(--primary);
+  padding: 2% ;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.grid1{
+  width:calc(100% - 20%);
+  margin: 2% auto;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   align-items: center;
+  grid-template-areas: "left" "right";
+}
+
+.sec1grid1{
+  padding-right: 2rem;
+  grid-area: left;
+}
+.sec2grid2{
+  grid-area: right;
+  padding-top: 1rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+}
+
+.sec2grid2 img{
+  width:100%;
+  height:100%; 
+  object-fit: cover;
+}
+.grid1 h1{
+  color:var(--primary2);
+  font-size: 40px;
+  padding-bottom: 0.8rem;
+  font-weight: bold;
+  font-family: Karla;
+}
+.grid1 h4{
+  color:var(--highlight);
+  font-size: 21px;
+  padding-bottom: 0.6rem;
+  font-weight: 300;
+  font-family: Markazi+Text;
+}
+
+.grid1 p{
+  color:var(--highlight);
+  font-size: 15px;
+  padding-bottom: 3rem;
+  font-family: Karla;
+}
+
+.special1{
+  display:grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "left" "right";
+  padding-bottom: 3rem;
+}
+
+.special1 h1{
+  grid-area: left;
+  color:var(--highlight2);
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Markazi+Text;
+}
+.specialbutton{
+  grid-area: right;
+  display:inline-flex;
+  justify-content:flex-end;
+ 
+}
+
+.card1{
+  grid-area: card1;
+}
+.card2{
+  grid-area: card2;
+}
+.card3{
+  grid-area: card3;
+}
+.specials{
+width:calc(100% - 40%);
+margin:5% auto;
+}
+.cardcontainer{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  grid-template-areas: "card1" "card2" "card3";
+}
+
+
+
+
+.cardcontainer article{
+  border:1px solid grey;
+  border-radius: 1rem;
+  }
+  .cardcontainer article:hover{
+      box-shadow: 7px 7px 2px grey;
+  }
+  .cardcontainer img{
+      width: 100%;
+      border-radius: 1rem;
+  }
+  .cardcontainer {
+      width: 100%;
+      border-radius: 1rem
+}
+.cardcontainer p,h1{
+  padding: .5rem;
+}
+.reviewsection{
+  margin: auto 20%;
+  padding:6% 1%;
+}
+.review1{
+  grid-area: review1;
+}
+.review2{
+  grid-area: review2;
+}
+.review3{
+  grid-area: review3;
+}
+.review4{
+  grid-area: review4;
+}
+.reviewcontainer{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+  grid-template-areas: "review1" "review2" "review3" "review4";
+}
+
+
+
+
+
+
+
+.reviewbox{
+  margin-top:3rem;
+  border:1px solid grey;
+  border-radius: 1rem;
+  background-color: var(--highlight);
+  padding:0.5rem;
+}
+.reviewrate{
+  width:100%;
+  padding-bottom: 0.7rem;
+}
+.profile{
+  width:100%;
+  height:100%;
+  border-radius: 50%;
+  padding: .5rem;
+  object-fit:cover
+}
+
+.lastsectionbox{
+  width:calc(100% - 20%);
+  margin:5% auto;
+  display:grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "last1" "last2";
+}
+.lastsecpara{
+  padding-right:1rem;
+  grid-area: last1;
+}
+.lastsectionbox p:nth-of-type(1){
+  font-size: 3rem;
+  font-family: Karla;
+  font-weight: bold;
+  color:#495e57;
+padding-bottom:1rem;
+
+
+}
+.lastsectionbox p:nth-of-type(2){
+  font-size: 1rem;
+  font-family: Karla;
+}
+.lastsectionbox h4{
+  font-size: 1.5rem;
+  font-family: Karla;
+  padding-bottom:1rem;
+  color:var(--primary2);
+}
+.imagecontainer{
+  width:100%;
+  display:flex;
+  flex-wrap: wrap;
+  grid-area: last2;
+}
+.overlapimage1{
+  height:50%;
+  width:50%;
+  align-self:flex-end;
+  translate:2rem -1rem;
+}
+.overlapimage2{
+  height:50%;
+  width:50%;
+  translate: -2rem 2rem;
+}
+.footercontainer{
+  width: calc(100% - 10%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows:auto;
+  grid-template-areas:"logobox doormatbox" "contactbox socialbox";
+  padding: 5rem 0; 
+}
+
+.footerlogobox{
+  width:100%;
+  grid-area: logobox;
+}
+.footerimage{
+  height:100%;
+  width:100%;
+}
+.doormatbox{
+  padding: 0 0.5rem;
+  grid-area: doormatbox;
+}
+.contactbox{
+  padding: 0 0.5rem;
+  grid-area: contactbox;
+
+}
+.socialbox{
+  padding: 0 0.5rem;
+  grid-area: socialbox;
+}
+footer h5{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color:#edefee;
+  padding: 1rem 0 ;
+}
+footer .ancho{
+  color:#edefee;
+  font-size: 0.9rem;
+  font-family: Karla;
+
+}
+footer a,p{
+  color:#edefee;
+  font-size: 0.9rem;
+  font-family: Karla;
+}
+footer li{
+  padding-bottom:0.5rem
+}
+footer .ancho:hover{
+  color:var(--primary2)
+}
+.bookcontainer{
+  background-color: var(--primary);
+}
+.reserve{
+  text-align: center;
+  color: var(--highlight);
+  font-size: 2rem;
+  font-family: 'Karla';
+  padding: 2rem 4rem;
+  background-color: var(--primary);
+}
+.inputsel{
+  width:15rem;
+  height:2rem;
+  background-color: #edefee;
+  border-radius: 1rem;
+  padding:5px;
+  border: 0;
+}
+input[type="date"]:focus, input[type="number"]:focus {
+  outline: none;
+}
+
+.formcontainer{
+  padding: 2rem 4rem;
+  display:flex; justify-content:center;
+}
+::placeholder{
+  padding:5px
+}
+.labelclass{
+  color:var(--primary2);
+  padding: 0 0.5rem;
+  font-family: Karla;
+  font-size: 1rem;
+}
+.inputdiv{
+  margin-top: 0.5rem;
+}
+.booknow{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 2rem;
+}
+.confirmed-title {
+
+text-align: center;
+  color:#000000
 }
 
-.App-link {
-  color: #61dafb;
+.confirmed-subtitle {
+color: #000000;
+text-align: center;
+max-width: 600px;
+width: 50%;
+}
+.title {
+font-family: 'Markazi Text', serif;
+font-size: 64px;
+font-weight: 500;
+line-height: 77px;
+letter-spacing: 0em;
+text-align: left;
+color: #F4CE14;
+margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.subtitle {
+font-family: 'Markazi Text', serif;
+font-size: 40px;
+font-weight: 400;
+line-height: 48.01px;
+letter-spacing: 0em;
+text-align: left;
+color: #FFFFFF;
+
+}
+.confirmed-main {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 2em;
+padding-block: 2em;
+
+}
+.errorgeneral{
+  color:red;
+  text-align: center;
+  font-size: medium;
+  font-family: Karla;
+}
+.error{
+  color:red;
+  font-size: small;
+  font-family: Karla;
+}
+
+@media(min-width:371px){
+  .cardcontainer{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: 1fr 1fr;
+      gap: auto;
+      grid-template-areas: "card1 card2" "card3";
   }
-  to {
-    transform: rotate(360deg);
+  .specials{
+      width:calc(100% - 20%);
+      margin:5% auto;
+      }
+}
+@media(min-width:687px){
+  .lastsectionbox{
+      width:calc(100% - 40%);
+      margin:5% auto;
+      display:grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: 1fr ;
+      grid-template-areas: "last1 last2";
+  }
+  .grid1{
+      width: calc(100% - 40%);
+      margin: 5% auto;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      align-items: center;
+      grid-template-areas: "left right";
   }
 }
+@media(min-width:447px){
+  .reviewcontainer{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: 1fr 1fr;
+      gap: 1.5rem;
+      grid-template-areas: "review1 review2" "review3 review4";
+  }
+}
+@media(min-width:665px){
+  .reviewcontainer{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: 1fr 1fr;
+      gap: 1.5rem;
+      grid-template-areas: "review1 review2 review3" "review4";
+  }
+}
+@media(min-width:677px){
+  .footercontainer{
+      width: calc(100% - 40%);
+      margin: 0 auto;
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: auto;
+      grid-template-areas: "logobox doormatbox contactbox socialbox";
+      padding: 5rem 0; 
+  }
+  .footerlogobox{
+      width:100%;
+      grid-area: logobox;
+  }
+}
+@media(min-width:769px){
+  .special1{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "left right";
+      padding-bottom: 3rem;
+  } 
+  .sec2grid2{
+      grid-area: right;
+      padding-right: 1rem;
+  } 
+  .cardcontainer{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 1.5rem;
+  }
+  .specials{
+      width:calc(100% - 40%);
+      margin:5% auto;
+      }
+
+}
+@media(min-width:879px){
+  .reviewcontainer{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: 1fr ;
+      gap: 1.5rem;
+      grid-template-areas: "review1" "review2" "review3" "review4";
+  }
+}
+/* To know, On small resolutions it stacks the grid items in a column and on large resolutions it lines them up in a 
+single row.             */
+
+
+/* @media (max-width: 700px) {
+  .grid-adjustable-columns {
+    display: grid;
+    grid-auto-flow: row;
+  }
+}
+
+@media (min-width: 701px) {
+  .grid-adjustable-columns {
+    width: min(1000px,75rem);
+    margin: 0 auto;
+    grid-auto-flow: column;
+    gap: 1em;
+  }
+} */
